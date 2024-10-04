@@ -1,0 +1,104 @@
+.TH SHEEP 1 "October 2024" "sheep 0.1" "User Commands"
+.SH NAME
+sheep \- Simple MPD (Music Player Daemon) client
+.SH SYNOPSIS
+.B sheep
+.SH DESCRIPTION
+.B sheep
+is a minimal MPD client inspired by the suckless philosophy. It provides a simple, efficient interface for browsing and playing music through MPD.
+.SH OPTIONS
+.B sheep
+does not take any command line options.
+.SH INTERFACE
+sheep presents a three-column interface:
+.IP \[bu] 2
+Left column: Artists
+.IP \[bu]
+Middle column: Albums
+.IP \[bu]
+Right column: Songs
+.PP
+The status bar at the bottom displays playback information and current modes.
+.SH KEYBINDINGS
+.TP
+.BR q
+Quit sheep
+.TP
+.BR h ", " Left
+Move to left column
+.TP
+.BR l ", " Right
+Move to right column
+.TP
+.BR k ", " Up
+Move selection up
+.TP
+.BR j ", " Down
+Move selection down
+.TP
+.BR Enter
+Select item / Play song
+.TP
+.BR Space
+Play/Pause
+.TP
+.BR <
+Previous track
+.TP
+.BR >
+Next track
+.TP
+.BR +
+Volume up
+.TP
+.BR \-
+Volume down
+.TP
+.BR f
+Seek forward
+.TP
+.BR b
+Seek backward
+.TP
+.BR a
+Add selected song to queue
+.TP
+.BR C
+Clear queue
+.TP
+.BR r
+Toggle repeat mode
+.TP
+.BR z
+Toggle random mode
+.TP
+.BR s
+Toggle single mode
+.TP
+.BR c
+Toggle consume mode
+.TP
+.BR /
+Enter search mode
+.TP
+.BR R
+Refresh library
+.TP
+.BR ?
+Show help
+.SH CONFIGURATION
+sheep can be configured by editing the config.h file and recompiling. This allows customization of colors, keybindings, and other display options.
+.SH FILES
+.TP
+.I /usr/local/bin/sheep
+The sheep executable (default installation location)
+.TP
+.I ~/.config/mpd/mpd.conf
+MPD configuration file (default location)
+.SH BUGS
+Report bugs to: https://github.com/yourusername/sheep/issues
+.SH AUTHOR
+Your Name <your.email@example.com>
+.SH SEE ALSO
+.BR mpd (1),
+.BR mpc (1)
